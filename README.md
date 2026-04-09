@@ -183,7 +183,6 @@ This project is developed as a **Final Year College Project** for academic and p
 
 ## 👨‍💻 Author
 
-Built with ❤️ as a Final Year Project.
+Built with ❤️ as a Machine Learning Project.
 =======
 # Sentiment-Analysis-Project
->>>>>>> da1038e451eb5d1f44a0e4bcfd090ff7911c52b4
