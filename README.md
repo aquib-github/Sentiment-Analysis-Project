@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎯 Sentiment Analysis — Machine Learning Project
 
 A production-quality, end-to-end sentiment analysis system built with **Python**, **scikit-learn**, and **Streamlit**. This project classifies Twitter tweets into four sentiment categories: **Positive**, **Negative**, **Neutral**, and **Irrelevant**.
@@ -183,3 +184,6 @@ This project is developed as a **Final Year College Project** for academic and p
 ## 👨‍💻 Author
 
 Built with ❤️ as a Final Year Project.
+=======
+# Sentiment-Analysis-Project
+>>>>>>> da1038e451eb5d1f44a0e4bcfd090ff7911c52b4
