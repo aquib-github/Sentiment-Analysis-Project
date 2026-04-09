@@ -19,7 +19,6 @@ if str(PROJECT_ROOT) not in sys.path:
 
 import streamlit as st
 import pandas as pd
-import time
 
 import config
 from src.data.data_loader import load_csv, load_uploaded_csv
@@ -360,9 +359,13 @@ with col_upload:
         uploaded = st.file_uploader("Upload CSV file", type=["csv"], label_visibility="collapsed")
         if uploaded:
             with st.spinner("Reading file …"):
-                df_raw = load_uploaded_csv(uploaded, column_names=config.DATASET_COLUMNS)
-                st.session_state["df_raw"] = df_raw
-            st.success(f"✅ Uploaded **{len(df_raw):,}** rows")
+                try:
+                    df_raw = load_uploaded_csv(uploaded, column_names=config.DATASET_COLUMNS)
+                    st.session_state["df_raw"] = df_raw
+                    st.success(f"✅ Uploaded **{len(df_raw):,}** rows")
+                except Exception as e:
+                    logger.error("Error processing uploaded file: %s", str(e))
+                    st.error(f"Failed to process CSV file. Ensure it is formatted correctly. Error: {str(e)}")
 
 with col_info:
     st.markdown(
